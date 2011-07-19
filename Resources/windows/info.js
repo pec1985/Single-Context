@@ -79,7 +79,7 @@ W.Info = function(){
 		function(json){
 			// populate everything
 			hotels.selected = json.details;
-			log.json(json);
+			Log.Json(json);
 			hotels.images.push(hotels.selected.image);
 			title.text = hotels.selected.name;
 			image.image = hotels.selected.image;

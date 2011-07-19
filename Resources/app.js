@@ -36,7 +36,7 @@
 
 // add all the files that we need for the app, but remember, EVERTHING is global, be careful
 Ti.include('utils/ui.js');
-Ti.include('utils/log.js');
+Ti.include('utils/Log.js');
 Ti.include('utils/utils.js');
 Ti.include('windows.js');
 
@@ -76,19 +76,19 @@ var hotels = {
 	
 	// function to get location
 	function getLocationAndStartApp(e){
-		log.json(e);
+		Log.Json(e);
 		// here we use the "x" flag
 		if(x){
 			// if success, great, we have a real location, start the app!
 			if(e.success){
 				LOC = {lat:e.coords.latitude,lng:e.coords.longitude};
-				log.info('Real Location');
+				Log.Info('Real Location');
 				startApp();
 			}
 			// if no success, that's ok, we defined a "fake" location up top
 			// start the app!!!
 			else {
-				log.info('Fake Location');
+				Log.Info('Fake Location');
 				startApp();
 			}
 			// change the flag to false

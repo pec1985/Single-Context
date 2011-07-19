@@ -15,7 +15,7 @@ W.Map = function(){
 
 	// forward geolocation function
 	Ti.Geolocation.forwardGeocoder(hotels.selected.address, function(e) {
-		log.json(e);
+		Log.Json(e);
 		// create the pin and place it on the location
 		var pin = Ti.Map.createAnnotation({
 			latitude: e.latitude,

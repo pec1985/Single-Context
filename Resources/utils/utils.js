@@ -48,14 +48,14 @@ var Utils = {};
 			xhr.onload = function(){
 				try{
 					var json = JSON.parse(this.responseText);
-					log.server.parse(this.responseText);
+					Log.Server.PARSE(this.responseText);
 					callback(json);
 				}catch(e){
 					UI.Alert({
 						title:'Oh No!!!',
 						message:e
 					}).show();
-					log.server.error(this.responseText);
+					Log.Server.ERROR(this.responseText);
 				}
 			};
 			xhr.onerror = function(){
@@ -63,11 +63,11 @@ var Utils = {};
 					title:'Oh No!!!',
 					message:'Server Error!'
 				}).show();
-				log.server.error(this.responseText);
-				log.server.error(this.status);
+				Log.Server.ERROR(this.responseText);
+				Log.Server.ERROR(this.status);
 			};
 			xhr.open(params.type,params.url);
-			log.server.url(params.url);
+			Log.Server.URL(params.url);
 			xhr.send();
 		}
 	};

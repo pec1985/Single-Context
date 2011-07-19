@@ -60,13 +60,13 @@ var UI = {};
 			var win = Ti.UI.createWindow(e);
 			// some log event listeners
 			win.addEventListener('open', function(){
-				log.win(e.file + ' opened');
+				Log.Win(e.file + ' opened');
 			});
 			win.addEventListener('focus', function(){
-				log.win(e.file + ' focused');
+				Log.Win(e.file + ' focused');
 			});
 			win.addEventListener('close', function(){
-				log.win(e.file + ' closed');
+				Log.Win(e.file + ' closed');
 			});
 			return win;
 		}
