@@ -36,7 +36,7 @@
 
 // add all the files that we need for the app, but remember, EVERTHING is global, be careful
 Ti.include('utils/ui.js');
-Ti.include('utils/Log.js');
+Ti.include('utils/log.js');
 Ti.include('utils/utils.js');
 Ti.include('windows.js');
 
